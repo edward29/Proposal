@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Crafty+Girls&family=Poppins:wght@400;500;700&display=swap');
+
+/* 
+font-family: 'Alex Brush', cursive;
+font-family: 'Crafty Girls', cursive;
+font-family: 'Poppins', sans-serif; 
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: #dedede;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.ninong {
+    width: 320px;
+    height: 560px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: url('first.png'); /* first picture*/
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    box-shadow: 0 0 40px 10px #50b6ed;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 160px;
+    height: auto;
+    transform: translate(80px, 240px);
+}
+
+.buttons button {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #4cbcf8;
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    outline: none;
+    transition: .4s;
+    animation: btn 8s linear infinite;
+}
+
+@keyframes btn {
+    from {
+        border: #004aad 2px solid;
+        box-shadow:-5px 5px 10px #dedede, 5px -5px 10px #b49a9a, 5px 5px 10px #dedede, -5px -5px 10px #b49a9a;
+    }
+    to {
+        border: #ffffff 2px solid;
+        box-shadow: 5px -5px 10px #dedede, -5px 5px 10px #b49a9a, -5px -5px 10px #b49a9a, 5px 5px 10px #dedede;
+    }
+    
+}
+
+
+.buttons #yes:hover {
+    background: #1c95d6;
+}
+
+.buttons #no:hover {
+    background-color: #e51919;
+}
+
+
+@media screen and (max-width: 324px) {
+    .ninong {
+        height: 490px;
+        width: 280px;
+    }
+
+    .buttons {
+        transform: translate(71px, 215px);
+        width: 150px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+}
